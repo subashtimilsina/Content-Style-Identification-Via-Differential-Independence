@@ -1,0 +1,1 @@
+python train_dependent.py --main_path="your/path" --entity_name="name_of_group"
