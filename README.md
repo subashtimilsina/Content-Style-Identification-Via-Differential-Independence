@@ -13,11 +13,12 @@ The codebase is organized into two self-contained sets of experiments:
 
 ## Method Overview
 
+![Generative model](pics/csdi%20model.png)
+
 ### Generative model
 
 We assume the observed data is produced by a shared generator `g` that mixes a **content** latent `c` with a **domain-specific style** latent `s^(n)`. For each domain `n`, samples are generated as `x^(n) = g(c, s^(n))`. The same content (e.g., the digit "3") combined with different styles produces samples that look the same in semantics but differ in appearance across domains.
 
-![Generative model](pics/gen_model.png)
 
 ### CSDI regularization (Differential Independence)
 
@@ -25,7 +26,6 @@ Standard independence-based disentanglement fails when content and style are sta
 
 `R(J_c g(c, s^(n))) ⊥ R(J_{s^(n)} g(c, s^(n)))`.
 
-![CSDI illustration](pics/csdi_illus.png)
 
 In practice, this is enforced as a regularizer that penalizes correlation between the content and style Jacobians of the generator, yielding identifiable content–style separation across domains.
 
