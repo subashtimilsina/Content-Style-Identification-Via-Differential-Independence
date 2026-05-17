@@ -1,6 +1,6 @@
 # Content-Style Identification via Differential Independence
 
-This repository contains the official code to reproduce the experiments in the paper:
+This repository contains the official code to reproduce the experiments in the ICML 2026 paper:
 
 [**"Content-Style Identification via Differential Independence"**](https://subashtimilsina.github.io)
 
@@ -63,7 +63,7 @@ All commands below assume the `i2i` environment is active.
 
 ## 1. AFHQ and CelebA-HQ Experiments
 
-All commands in this section are run from the `High Resolution Experiments/` directory:
+The code for these experiments are based on [StyleGAN2-ADA](https://github.com/NVlabs/stylegan2-ada-pytorch). All commands in this section are run from the `High Resolution Experiments/` directory:
 
 ```bash
 cd "High Resolution Experiments"
@@ -71,7 +71,7 @@ cd "High Resolution Experiments"
 
 ### 1.1 Prepare the datasets
 
-Download the AFHQ and CelebA-HQ datasets, then convert and downsample them to the resolution used for training:
+Download the AFHQ and CelebA-HQ datasets (We use: https://github.com/clovaai/stargan-v2), then convert and downsample them to the resolution used for training:
 
 ```bash
 bash dataset_scripts/download.sh
